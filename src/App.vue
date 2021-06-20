@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <Header/>
-    <div class="inner-wrapper">
+    <div class="inner-wrapper inner-container">
       <div class="router-wrapper">
         <Home/>
       </div>
@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 
 .page {
-
+  background-color: #f1f2f6;
   min-height: 100vh;
 }
 
@@ -34,6 +34,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+
+.inner-container {
+  margin-top: 2rem;
+  min-height: 100vh;
+
+  background-color: white;
+
+  border-radius: 1em;
+
+  padding: 5rem;
 }
 
 .inner-wrapper {

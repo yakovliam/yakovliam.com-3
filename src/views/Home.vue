@@ -54,7 +54,7 @@ export default {
 
       .project-content {
         text-align: center;
-        width: 15rem;
+        width: 10em;
       }
     }
   }

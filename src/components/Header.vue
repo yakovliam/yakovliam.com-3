@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="content inner-wrapper">
+    <div class="content">
       <h2 class="header-text">Jacob C.</h2>
       <div class="contact-button-wrapper">
         <a href="mailto:jacob@yakovliam.com" class="contact-button">Contact</a>
@@ -19,17 +19,20 @@ export default {
 .header {
   text-align: center;
   width: 100%;
-  height: 65px;
+  height: 100px;
 
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05%);
 
-  .content {
-    align-items: center;
+  background-color: white;
 
+  .content {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+
+    height: 100%;
+    align-items: center;
 
     .header-text {
       text-align: left;
@@ -38,7 +41,7 @@ export default {
 
     .contact-button-wrapper {
       text-align: right;
-      flex: 2;
+      flex: 1;
 
       a {
         &:hover {
@@ -57,6 +60,42 @@ export default {
         box-sizing: border-box;
         color: rgba(41, 41, 41, 1);
       }
+    }
+
+    // Under
+    @media only screen and (max-width: 575px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    // Small
+    @media only screen and (min-width: 576px) {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    // Medium
+    @media only screen and (min-width: 768px) {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    // Large
+    @media only screen and (min-width: 992px) {
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    // Extra Large
+    @media only screen and (min-width: 1200px) {
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    // Extra Large
+    @media only screen and (min-width: 1400px) {
+      margin-left: 250px;
+      margin-right: 250px;
+    }
+    // +Extra Large
+    @media only screen and (min-width: 1600px) {
+      margin-left: 350px;
+      margin-right: 350px;
     }
   }
 }
