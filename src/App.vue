@@ -43,7 +43,8 @@ export default {
 
   background-color: white;
 
-  border-radius: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 
   padding-left: 5rem;
   padding-right: 5rem;

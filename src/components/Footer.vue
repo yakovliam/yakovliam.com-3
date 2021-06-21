@@ -64,6 +64,9 @@ a:hover {
 
   padding: 20px;
 
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+
   .copyright {
     p, h4 {
       display: inline-block;
