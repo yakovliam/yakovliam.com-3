@@ -29,7 +29,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      year: "2020"
+      year: new Date().getFullYear()
     }
   }
 }
