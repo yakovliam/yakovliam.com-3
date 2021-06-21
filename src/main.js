@@ -7,6 +7,7 @@ import {faTwitter, faGithub, faGitlab, faDiscord, faLinkedin} from '@fortawesome
 import Home from "@/views/Home";
 import Clients from "@/views/Clients";
 import { createRouter, createWebHistory } from 'vue-router'
+import NotFound from "@/views/NotFound";
 
 library.add(faTwitter, faGithub, faGitlab, faDiscord, faLinkedin)
 
@@ -16,7 +17,8 @@ library.add(faTwitter, faGithub, faGitlab, faDiscord, faLinkedin)
 const routes = [
     {path: '/', component: Home},
     {path: '/clients', component: Clients},
-]
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
+];
 
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
@@ -25,7 +27,7 @@ const router = createRouter({
     // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
     history: createWebHistory(),
     routes, // short for `routes: routes`
-})
+});
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)

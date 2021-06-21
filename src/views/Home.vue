@@ -9,6 +9,7 @@
     <p>Hello 👋, I'm Jacob. I'm a passionate software engineer from the USA. I enjoy problem
       solving and the feeling of overcoming a
       challenge.</p>
+    <p>I currently work at <a href="https://www.tarigma.com/">Tarigma</a>.</p>
 
     <a href="https://www.twitter.com/yakovliam">
       <img
@@ -40,7 +41,7 @@
         <h2 class="project-title">
           <a class="floating" href="https://howlonguntil.christmas/">HLUC?</a></h2>
         <div class="project-content">
-          <p>Find out how many days until the next Christmas! (Hanukkah too!)</p>
+          <p>Find out how many days until the next Christmas!</p>
         </div>
       </div>
     </div>
@@ -110,6 +111,13 @@ img:hover {
 }
 
 .who-am-i {
+  padding-top: 2rem;
+
+  a:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
   .cover-image-wrapper {
     text-align: center;
 

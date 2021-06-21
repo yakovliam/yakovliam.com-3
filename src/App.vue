@@ -45,7 +45,8 @@ export default {
 
   border-radius: 1em;
 
-  padding: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .inner-wrapper {

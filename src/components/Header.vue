@@ -1,9 +1,15 @@
 <template>
   <header class="header">
     <div class="content">
-      <h2 class="header-text">Jacob C.</h2>
-      <a>Home</a>
-      <a>Clients</a>
+      <h2 class="header-text">
+        <router-link to="/" class="link"> Jacob C.</router-link>
+      </h2>
+      <div class="link">
+        <router-link to="/">Home</router-link>
+      </div>
+      <div class="link">
+        <router-link to="/clients">Clients</router-link>
+      </div>
       <div class="contact-button-wrapper">
         <a href="mailto:jacob@yakovliam.com" class="contact-button">Contact</a>
       </div>
@@ -36,7 +42,30 @@ export default {
     height: 100%;
     align-items: center;
 
+    .link {
+      flex: 1;
+
+      a {
+        display: inline-block;
+        transition: 1s;
+        font-weight: bold;
+        text-decoration: none;
+        color: #3f5876;
+      }
+
+      a:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2) rotate(1deg);
+        color: #7192bb;
+      }
+    }
+
     .header-text {
+      .link {
+        text-decoration: none;
+        color: #3f5876;
+      }
+
       text-align: left;
       flex: 1;
     }
