@@ -3,20 +3,21 @@
     <Header/>
     <div class="inner-wrapper inner-container">
       <div class="router-wrapper">
-        <Home/>
+        <router-view/>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
-import Home from "@/views/Home";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
-    Home,
+    Footer,
     Header,
   }
 }
@@ -70,13 +71,13 @@ export default {
   }
   // Extra Large
   @media only screen and (min-width: 1400px) {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 350px;
+    margin-right: 350px;
   }
   // +Extra Large
   @media only screen and (min-width: 1600px) {
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 450px;
+    margin-right: 450px;
   }
 }
 

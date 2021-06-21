@@ -4,7 +4,7 @@
       <img :src="coverImage" class="cover-image" alt="Cover Image"/>
     </div>
     <div class="title">
-      <h2>Who am I?</h2>
+      <h2>CLIENTS</h2>
     </div>
     <p>Hello 👋, I'm Jacob. I'm a passionate software engineer from the USA. I enjoy problem
       solving and the feeling of overcoming a
@@ -73,7 +73,7 @@
 import cover from "../assets/40674666.png";
 
 export default {
-  name: 'Home',
+  name: 'Clients',
   data() {
     return {
       coverImage: cover,

@@ -2,6 +2,8 @@
   <header class="header">
     <div class="content">
       <h2 class="header-text">Jacob C.</h2>
+      <a>Home</a>
+      <a>Clients</a>
       <div class="contact-button-wrapper">
         <a href="mailto:jacob@yakovliam.com" class="contact-button">Contact</a>
       </div>
@@ -62,10 +64,10 @@ export default {
       }
     }
 
-    // Under
+    // Small
     @media only screen and (max-width: 575px) {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
     // Small
     @media only screen and (min-width: 576px) {
@@ -89,13 +91,13 @@ export default {
     }
     // Extra Large
     @media only screen and (min-width: 1400px) {
-      margin-left: 250px;
-      margin-right: 250px;
+      margin-left: 350px;
+      margin-right: 350px;
     }
     // +Extra Large
     @media only screen and (min-width: 1600px) {
-      margin-left: 350px;
-      margin-right: 350px;
+      margin-left: 450px;
+      margin-right: 450px;
     }
   }
 }
