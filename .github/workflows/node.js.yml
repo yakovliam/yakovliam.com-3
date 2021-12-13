@@ -24,6 +24,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
     - run: yarn run build --if-present
+    
+    # Copies dist to a tar file
+    - uses: actions/checkout@v2
+
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: "tar -cvf deploy.tar ./dist/"
 
     # Copying files and artifacts via SSH
     - name: Copying files to server
@@ -34,6 +41,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ""
         rm: true
-        source: "dist/"
+        source: "deploy.tar"
         target: "${{ secrets.REMOTE_DIR }}"
     
