@@ -5,16 +5,32 @@ name: Manual Test CI
 
 on: workflow_dispatch
 
-    
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
+
     steps:
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@master
+    - uses: actions/checkout@v2
+      with:
+        clean: false   
+
+    # Runs a set of commands using the runners shell
+    - name: Lists files and copies to a deploy.tar
+      run: |
+        mkdir ./test/
+        cat "abc" >> ./test/a.txt
+        tar -cvf deploy.tar test/
+
+    # Copying files and artifacts via SSH
+    - name: Copying files to server
+      uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        script: "mkdir /home/${{ secrets.SSH_USER }}/a111"
+        passphrase: ""
+        rm: true
+        source: "deploy.tar"
+        target: "/home/gh/test1/"
