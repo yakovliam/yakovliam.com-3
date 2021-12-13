@@ -6,7 +6,8 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import {faTwitter, faGithub, faGitlab, faDiscord, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import Home from "@/views/Home";
 import Clients from "@/views/Clients";
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import NotFound from "@/views/NotFound";
 
 library.add(faTwitter, faGithub, faGitlab, faDiscord, faLinkedin)
 
@@ -16,7 +17,7 @@ library.add(faTwitter, faGithub, faGitlab, faDiscord, faLinkedin)
 const routes = [
     {path: '/', component: Home},
     {path: '/clients', component: Clients},
-    {path: '/:pathMatch(.*)*', name: 'not-found', component: Home},
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
 ];
 
 // 3. Create the router instance and pass the `routes` option
