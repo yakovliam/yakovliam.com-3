@@ -17,4 +17,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        script: whoami
+        script: "mkdir /home/${{ secrets.SSH_USER }}/a111"
