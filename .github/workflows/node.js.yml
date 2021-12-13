@@ -31,6 +31,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Lists files and copies to a deploy.tar
       run: |
+        cd ../
         ls -a
         tar -cvf deploy.tar dist/
 
