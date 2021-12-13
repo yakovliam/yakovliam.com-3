@@ -33,4 +33,4 @@ jobs:
         passphrase: ""
         rm: true
         source: "deploy.tar"
-        target: "/home/gh/test1/"
+        target: ${{ secrets.REMOTE_DIR }}
