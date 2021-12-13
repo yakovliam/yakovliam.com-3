@@ -33,4 +33,4 @@ jobs:
         passphrase: ""
         rm: true
         source: "deploy.tar"
-        target: ${{ secrets.REMOTE_DIR }}
+        target: "/var/www/site/"
