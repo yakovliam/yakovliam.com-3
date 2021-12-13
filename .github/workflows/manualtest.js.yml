@@ -3,14 +3,12 @@
 
 name: Node.js CI
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
+
     
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     # Test ssh copying files
   - name: Copying files to server
     uses: appleboy/scp-action@master
