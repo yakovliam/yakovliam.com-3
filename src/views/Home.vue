@@ -9,7 +9,6 @@
     <p>Hello 👋, I'm Jacob. I'm a passionate software engineer from the USA. I enjoy problem
       solving and the feeling of overcoming a
       challenge.</p>
-    <p>I currently work at <a href="https://www.tarigma.com/">Tarigma</a>.</p>
 
     <a href="https://www.twitter.com/yakovliam">
       <img
