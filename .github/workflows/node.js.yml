@@ -29,8 +29,10 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: "tar -cvf deploy.tar ./dist/"
+    - name: Lists files and copies to a deploy.tar
+      run: |
+        ls -a
+        tar -cvf deploy.tar dist/
 
     # Copying files and artifacts via SSH
     - name: Copying files to server
