@@ -33,6 +33,6 @@ jobs:
         passphrase: ""
         rm: true
         source: "deploy.tar"
-        target: "/var/www/site/"
+        target: "/var/www/site/subtest"
         strip_components: 1
 
