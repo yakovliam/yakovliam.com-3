@@ -20,7 +20,7 @@ jobs:
     - name: Lists files and copies to a deploy.tar
       run: |
         mkdir ./test/
-        cat "abc" > ./test/a.txt
+        echo "abc" > ./test/a.txt
         tar -cvf deploy.tar test/
 
     # Copying files and artifacts via SSH
