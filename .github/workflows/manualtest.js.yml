@@ -21,7 +21,6 @@ jobs:
       run: |
         mkdir ./test/
         echo "abc" > ./test/a.txt
-        tar -cvf deploy.tar test/
 
     # Copying files and artifacts via SSH
     - name: Copying files to server
@@ -32,6 +31,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ""
         rm: true
-        source: "deploy.tar"
+        source: "test/"
         target: ${{ secrets.REMOTE_DIR }}
 
