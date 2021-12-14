@@ -29,13 +29,7 @@ jobs:
         
     - run: yarn install
     - run: yarn run build --if-present
-
-    # Runs a set of commands using the runners shell
-    - name: Lists files and copies to a deploy.tar
-      run: |
-        ls -a
-        tar -cvf deploy.tar dist/
-
+        
     # Copying files and artifacts via SSH
     - name: Copying files to server
       uses: appleboy/scp-action@master
@@ -45,6 +39,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ""
         rm: true
-        source: "deploy.tar"
-        target: "${{ secrets.REMOTE_DIR }}"
+        source: "dist/"
+        target: ${{ secrets.REMOTE_DIR }}
     
