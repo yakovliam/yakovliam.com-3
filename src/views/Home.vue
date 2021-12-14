@@ -8,7 +8,7 @@
     </div>
     <p>Hello 👋, I'm Jacob. I'm a passionate software engineer from the USA. I enjoy problem
       solving and the feeling of overcoming a
-      challenge.</p>
+      challenge!</p>
 
     <a href="https://www.twitter.com/yakovliam">
       <img
