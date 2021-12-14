@@ -33,6 +33,5 @@ jobs:
         passphrase: ""
         rm: true
         source: "deploy.tar"
-        target: "/var/www/site/subtest"
-        strip_components: 1
+        target: ${{ secrets.REMOTE_DIR }}
 
