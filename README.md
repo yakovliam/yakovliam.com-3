@@ -1,4 +1,4 @@
-# yakovliam.com-3-vue
+# yakovliam.com
 
 ## Project setup
 ```
