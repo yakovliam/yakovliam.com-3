@@ -19,8 +19,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Lists files and copies to a deploy.tar
       run: |
-        mkdir ./test/
-        echo "abc" > ./test/a.txt
+        mkdir ./dist/
+        echo "abc" > ./dist/a.txt
 
     # Copying files and artifacts via SSH
     - name: Copying files to server
@@ -31,6 +31,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ""
         rm: true
-        source: "test/"
+        source: "dist/"
         target: ${{ secrets.REMOTE_DIR }}
+        strip_components: 1
 
