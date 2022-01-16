@@ -62,9 +62,6 @@
       <a href="https://discord.gg/9Q3SZKb9HX">
         <font-awesome-icon :icon="['fab', 'discord']" size="2x"/>
       </a>
-      <a href="https://www.linkedin.com/in/jacob-cohen-a82162208/">
-        <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
-      </a>
     </div>
   </div>
 </template>
